@@ -1,0 +1,565 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+    <IsPackable>false</IsPackable>
+    <SpaRoot>.\</SpaRoot>
+    <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+
+    <!-- Set this to true if you enable server-side prerendering -->
+    <BuildServerSideRenderer>false</BuildServerSideRenderer>
+    <ApplicationIcon />
+    <OutputType>Library</OutputType>
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove=".vscode\**" />
+    <Compile Remove=".vs\**" />
+    <Compile Remove="bin\**" />
+    <Compile Remove="build\**" />
+    <Compile Remove="karma_html\**" />
+    <Compile Remove="obj\**" />
+    <Content Remove="$(SpaRoot)**" />
+    <Content Remove=".vscode\**" />
+    <Content Remove=".vs\**" />
+    <Content Remove="bin\**" />
+    <Content Remove="build\**" />
+    <Content Remove="karma_html\**" />
+    <Content Remove="obj\**" />
+    <EmbeddedResource Remove=".vscode\**" />
+    <EmbeddedResource Remove=".vs\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <EmbeddedResource Remove="build\**" />
+    <EmbeddedResource Remove="karma_html\**" />
+    <EmbeddedResource Remove="obj\**" />
+    <None Remove="$(SpaRoot)**" />
+    <None Remove=".vscode\**" />
+    <None Remove=".vs\**" />
+    <None Remove="bin\**" />
+    <None Remove="build\**" />
+    <None Remove="karma_html\**" />
+    <None Remove="obj\**" />
+    <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove=".\.vscode\settings.json" />
+    <None Remove=".\.vs\Honeywell.FTS.Frontend\v16\.suo" />
+    <None Remove=".\.vs\Honeywell.FTS.Frontend\v16\Server\sqlite3\db.lock" />
+    <None Remove=".\.vs\Honeywell.FTS.Frontend\v16\Server\sqlite3\storage.ide" />
+    <None Remove=".\.vs\Honeywell.FTS.Frontend\v16\Server\sqlite3\storage.ide-shm" />
+    <None Remove=".\.vs\Honeywell.FTS.Frontend\v16\Server\sqlite3\storage.ide-wal" />
+    <None Remove=".\.vs\Honeywell.FTS.Frontend\v16\TestStore\0\000-0000.testlog" />
+    <None Remove=".\.vs\Honeywell.FTS.Frontend\v16\TestStore\0\testlog.manifest" />
+    <None Remove=".\.vs\ProjectSettings.json" />
+    <None Remove=".\.vs\slnx.sqlite" />
+    <None Remove=".\.vs\VSWorkspaceState.json" />
+    <None Remove=".\bin\Debug\netcoreapp3.0\Honeywell.FTS.Frontend.deps.json" />
+    <None Remove=".\bin\Debug\netcoreapp3.0\Honeywell.FTS.Frontend.dll" />
+    <None Remove=".\bin\Debug\netcoreapp3.0\Honeywell.FTS.Frontend.pdb" />
+    <None Remove=".\build\about-about-module-ngfactory.js" />
+    <None Remove=".\build\about-about-module-ngfactory.js.map" />
+    <None Remove=".\build\about-about-module.js" />
+    <None Remove=".\build\about-about-module.js.map" />
+    <None Remove=".\build\ajax-loader.gif" />
+    <None Remove=".\build\Arrow_Bootom.png" />
+    <None Remove=".\build\Arrow_Bootom_hover.png" />
+    <None Remove=".\build\Arrow_Left.png" />
+    <None Remove=".\build\Arrow_Left_hover.png" />
+    <None Remove=".\build\Arrow_Right.png" />
+    <None Remove=".\build\Arrow_Right_hover.png" />
+    <None Remove=".\build\Arrow_Top.png" />
+    <None Remove=".\build\Arrow_Top_hover.png" />
+    <None Remove=".\build\assets\config\config.json" />
+    <None Remove=".\build\assets\fonts\HoneywellSansTT-Bold.woff" />
+    <None Remove=".\build\assets\fonts\HoneywellSansTT-Light.woff" />
+    <None Remove=".\build\assets\fonts\HoneywellSansTT-Medium.woff" />
+    <None Remove=".\build\assets\i18n\de.json" />
+    <None Remove=".\build\assets\i18n\en.json" />
+    <None Remove=".\build\assets\i18n\es.json" />
+    <None Remove=".\build\assets\i18n\ru.json" />
+    <None Remove=".\build\assets\images\10SlotLayout.svg" />
+    <None Remove=".\build\assets\images\12SlotLayout.svg" />
+    <None Remove=".\build\assets\images\14SlotLayout.svg" />
+    <None Remove=".\build\assets\images\6SlotLayout.svg" />
+    <None Remove=".\build\assets\images\8SlotLayout.svg" />
+    <None Remove=".\build\assets\images\add.png" />
+    <None Remove=".\build\assets\images\Add.svg" />
+    <None Remove=".\build\assets\images\addicon.svg" />
+    <None Remove=".\build\assets\images\addiconBlue.svg" />
+    <None Remove=".\build\assets\images\alertRed.png" />
+    <None Remove=".\build\assets\images\alertWhite.png" />
+    <None Remove=".\build\assets\images\blackEmptyBox.png" />
+    <None Remove=".\build\assets\images\Building Icon.svg" />
+    <None Remove=".\build\assets\images\c&amp;e.png" />
+    <None Remove=".\build\assets\images\changeimage.svg" />
+    <None Remove=".\build\assets\images\checkmark.svg" />
+    <None Remove=".\build\assets\images\close.svg" />
+    <None Remove=".\build\assets\images\companyname_gradiant.png" />
+    <None Remove=".\build\assets\images\Contact Icon.svg" />
+    <None Remove=".\build\assets\images\contactperson.svg" />
+    <None Remove=".\build\assets\images\criticalGray.png" />
+    <None Remove=".\build\assets\images\criticalWhite.png" />
+    <None Remove=".\build\assets\images\crop area.jpg" />
+    <None Remove=".\build\assets\images\crop.jpg" />
+    <None Remove=".\build\assets\images\delete.png" />
+    <None Remove=".\build\assets\images\delete.svg" />
+    <None Remove=".\build\assets\images\Delete_Icon.svg" />
+    <None Remove=".\build\assets\images\DeviceAddresswithDeviceLabel%401x.jpg" />
+    <None Remove=".\build\assets\images\DeviceAddresswithZone+DeviceLabel%401x.jpg" />
+    <None Remove=".\build\assets\images\DeviceAddresswithZoneLabel%401x.jpg" />
+    <None Remove=".\build\assets\images\devices.svg" />
+    <None Remove=".\build\assets\images\edit.png" />
+    <None Remove=".\build\assets\images\editIconGrey.svg" />
+    <None Remove=".\build\assets\images\Edit_Icon.svg" />
+    <None Remove=".\build\assets\images\Edit_Icon_Blue.svg" />
+    <None Remove=".\build\assets\images\edit_photo.svg" />
+    <None Remove=".\build\assets\images\EightSlotLayout.png" />
+    <None Remove=".\build\assets\images\emptyBox.png" />
+    <None Remove=".\build\assets\images\emptySlot.png" />
+    <None Remove=".\build\assets\images\file.png" />
+    <None Remove=".\build\assets\images\fusionpanel.png" />
+    <None Remove=".\build\assets\images\graySeparator.png" />
+    <None Remove=".\build\assets\images\gridView.svg" />
+    <None Remove=".\build\assets\images\GridViewActiveState.png" />
+    <None Remove=".\build\assets\images\gridViewDefault.png" />
+    <None Remove=".\build\assets\images\gridView_active.svg" />
+    <None Remove=".\build\assets\images\heatSensors.svg" />
+    <None Remove=".\build\assets\images\HoneywellLogo256.png" />
+    <None Remove=".\build\assets\images\hon_logo.jpg" />
+    <None Remove=".\build\assets\images\icons\checkbox-checked-disabled.svg" />
+    <None Remove=".\build\assets\images\icons\checkbox-checked.svg" />
+    <None Remove=".\build\assets\images\icons\checkbox-empty.svg" />
+    <None Remove=".\build\assets\images\icons\checkbox-indeterminate.svg" />
+    <None Remove=".\build\assets\images\icons\devices\BaseSounderStrobeEN5423Vm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\BaseSounderStrobeVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\BaseSounderVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\BaseStrobeVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\CallPointVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\CallPointWaterproofVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\DualInputSingleOutputModuleVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\DualMonitorModuleVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\GasInterfaceVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\HazardSmokeSensorVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\HeatDetector58CFixedVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\HeatDetector78CFixedVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\HeatDetectorRateOfRiseVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\HighPowerStrobeIsVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\HighPowerStrobeVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\IntelligentLaserSmokeSensorVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\MiniModuleVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\NonAddressableZoneMonitorVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\OpticalBeamSmokeDetectorRemoteTestVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\OpticalBeamSmokeDetectorVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\OpticalSmokeSensorVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\SingleInputModuleVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\SingleOutputModuleVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\SixChannelOutputModuleVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\Smart2DetectorVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\Smart3DetectorVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\Smart4DetectorVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\SstModuleVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\Switching240VModuleVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\TenChannelInputModuleVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\ViewSmokeSensorVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\WallSounderStrobeVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\WallSounderVm.svg" />
+    <None Remove=".\build\assets\images\icons\devices\WallStrobeVm.svg" />
+    <None Remove=".\build\assets\images\icons\icon-action-add-active.svg" />
+    <None Remove=".\build\assets\images\icons\icon-action-add.svg" />
+    <None Remove=".\build\assets\images\icons\icon-action-assign-to-zone.svg" />
+    <None Remove=".\build\assets\images\icons\icon-action-change-template.svg" />
+    <None Remove=".\build\assets\images\icons\icon-action-change-type.svg" />
+    <None Remove=".\build\assets\images\icons\icon-action-delete-active.svg" />
+    <None Remove=".\build\assets\images\icons\icon-action-delete.svg" />
+    <None Remove=".\build\assets\images\icons\icon-action-edit-active.svg" />
+    <None Remove=".\build\assets\images\icons\icon-action-edit.svg" />
+    <None Remove=".\build\assets\images\icons\icon-action-export-blue.svg" />
+    <None Remove=".\build\assets\images\icons\icon-action-export.svg" />
+    <None Remove=".\build\assets\images\icons\icon-action-filter.svg" />
+    <None Remove=".\build\assets\images\icons\icon-action-search.svg" />
+    <None Remove=".\build\assets\images\icons\icon-action-unassign-from-zone.svg" />
+    <None Remove=".\build\assets\images\icons\icon-add-button-big.svg" />
+    <None Remove=".\build\assets\images\icons\icon-add-new.svg" />
+    <None Remove=".\build\assets\images\icons\icon-add.svg" />
+    <None Remove=".\build\assets\images\icons\icon-arrow-right.svg" />
+    <None Remove=".\build\assets\images\icons\icon-arrow-triangle-down-grey.svg" />
+    <None Remove=".\build\assets\images\icons\icon-arrow-triangle-left-grey.svg" />
+    <None Remove=".\build\assets\images\icons\icon-arrow-triangle-up-blue.svg" />
+    <None Remove=".\build\assets\images\icons\icon-back-arrow-blue.svg" />
+    <None Remove=".\build\assets\images\icons\icon-back-arrow-white.svg" />
+    <None Remove=".\build\assets\images\icons\icon-building.svg" />
+    <None Remove=".\build\assets\images\icons\icon-c&amp;e-active.svg" />
+    <None Remove=".\build\assets\images\icons\icon-c&amp;e.svg" />
+    <None Remove=".\build\assets\images\icons\icon-contact-active.svg" />
+    <None Remove=".\build\assets\images\icons\icon-contact.svg" />
+    <None Remove=".\build\assets\images\icons\icon-detail-view-active.svg" />
+    <None Remove=".\build\assets\images\icons\icon-detail-view.svg" />
+    <None Remove=".\build\assets\images\icons\icon-device-type-sensor.svg" />
+    <None Remove=".\build\assets\images\icons\icon-down-arrow-blue.svg" />
+    <None Remove=".\build\assets\images\icons\icon-down-arrow-grey.svg" />
+    <None Remove=".\build\assets\images\icons\icon-download-grey.svg" />
+    <None Remove=".\build\assets\images\icons\icon-export.svg" />
+    <None Remove=".\build\assets\images\icons\icon-file-active.svg" />
+    <None Remove=".\build\assets\images\icons\icon-file.svg" />
+    <None Remove=".\build\assets\images\icons\icon-grid-sorting-down.svg" />
+    <None Remove=".\build\assets\images\icons\icon-grid-sorting-up.svg" />
+    <None Remove=".\build\assets\images\icons\icon-grid-view-blue.svg" />
+    <None Remove=".\build\assets\images\icons\icon-grid-view-grey.svg" />
+    <None Remove=".\build\assets\images\icons\icon-import-file.svg" />
+    <None Remove=".\build\assets\images\icons\icon-info-active.svg" />
+    <None Remove=".\build\assets\images\icons\icon-info.svg" />
+    <None Remove=".\build\assets\images\icons\icon-list-view-active.svg" />
+    <None Remove=".\build\assets\images\icons\icon-list-view-sub-header.svg" />
+    <None Remove=".\build\assets\images\icons\icon-list-view.svg" />
+    <None Remove=".\build\assets\images\icons\icon-loop-view-active.svg" />
+    <None Remove=".\build\assets\images\icons\icon-loop-view.svg" />
+    <None Remove=".\build\assets\images\icons\icon-menu-blue.svg" />
+    <None Remove=".\build\assets\images\icons\icon-menu-gray.svg" />
+    <None Remove=".\build\assets\images\icons\icon-module-charger-grey.svg" />
+    <None Remove=".\build\assets\images\icons\icon-module-charger-white.svg" />
+    <None Remove=".\build\assets\images\icons\icon-module-cpu-grey.svg" />
+    <None Remove=".\build\assets\images\icons\icon-module-cpu-white.svg" />
+    <None Remove=".\build\assets\images\icons\icon-module-fare-grey.svg" />
+    <None Remove=".\build\assets\images\icons\icon-module-fare-white.svg" />
+    <None Remove=".\build\assets\images\icons\icon-module-fat-grey.svg" />
+    <None Remove=".\build\assets\images\icons\icon-module-fat-white.svg" />
+    <None Remove=".\build\assets\images\icons\icon-module-io-grey.svg" />
+    <None Remove=".\build\assets\images\icons\icon-module-io-white.svg" />
+    <None Remove=".\build\assets\images\icons\icon-module-loop-grey.svg" />
+    <None Remove=".\build\assets\images\icons\icon-module-loop-white.svg" />
+    <None Remove=".\build\assets\images\icons\icon-module-network-grey.svg" />
+    <None Remove=".\build\assets\images\icons\icon-module-network-white.svg" />
+    <None Remove=".\build\assets\images\icons\icon-module-serial-grey.svg" />
+    <None Remove=".\build\assets\images\icons\icon-module-serial-white.svg" />
+    <None Remove=".\build\assets\images\icons\icon-more-options-active.svg" />
+    <None Remove=".\build\assets\images\icons\icon-more-options.svg" />
+    <None Remove=".\build\assets\images\icons\icon-no-panel.svg" />
+    <None Remove=".\build\assets\images\icons\icon-panel-active.svg" />
+    <None Remove=".\build\assets\images\icons\icon-panel-sync-active.svg" />
+    <None Remove=".\build\assets\images\icons\icon-panel-sync-deactive.svg" />
+    <None Remove=".\build\assets\images\icons\icon-panel.svg" />
+    <None Remove=".\build\assets\images\icons\icon-print.svg" />
+    <None Remove=".\build\assets\images\icons\icon-report-active.svg" />
+    <None Remove=".\build\assets\images\icons\icon-report.svg" />
+    <None Remove=".\build\assets\images\icons\icon-search.svg" />
+    <None Remove=".\build\assets\images\icons\icon-settings-active.svg" />
+    <None Remove=".\build\assets\images\icons\icon-settings.svg" />
+    <None Remove=".\build\assets\images\icons\icon-show-preview.svg" />
+    <None Remove=".\build\assets\images\icons\icon-state-alert.svg" />
+    <None Remove=".\build\assets\images\icons\icon-state-warning.svg" />
+    <None Remove=".\build\assets\images\icons\icon-swap.svg" />
+    <None Remove=".\build\assets\images\icons\icon-tag-grey.svg" />
+    <None Remove=".\build\assets\images\icons\icon-triangle-gray.svg" />
+    <None Remove=".\build\assets\images\icons\icon-up-arrow-blue.svg" />
+    <None Remove=".\build\assets\images\icons\icon-zones-active.svg" />
+    <None Remove=".\build\assets\images\icons\icon-zones-grey.svg" />
+    <None Remove=".\build\assets\images\icons\icon-zones.svg" />
+    <None Remove=".\build\assets\images\icons\missing-icon-placeholder.svg" />
+    <None Remove=".\build\assets\images\infoGray.png" />
+    <None Remove=".\build\assets\images\infoicon_old.svg" />
+    <None Remove=".\build\assets\images\infoWhite.png" />
+    <None Remove=".\build\assets\images\lifering.png" />
+    <None Remove=".\build\assets\images\Line.png" />
+    <None Remove=".\build\assets\images\listView.svg" />
+    <None Remove=".\build\assets\images\listViewActiveState.png" />
+    <None Remove=".\build\assets\images\listViewDefaultState.png" />
+    <None Remove=".\build\assets\images\loader.svg" />
+    <None Remove=".\build\assets\images\mapPlaceholder.png" />
+    <None Remove=".\build\assets\images\noPanel.png" />
+    <None Remove=".\build\assets\images\panel-sync-configuration-laptop.svg" />
+    <None Remove=".\build\assets\images\panel-sync-configuration-panel.svg" />
+    <None Remove=".\build\assets\images\panel.png" />
+    <None Remove=".\build\assets\images\Panel.svg" />
+    <None Remove=".\build\assets\images\previewCustDetails.png" />
+    <None Remove=".\build\assets\images\previewDeviceInFire.png" />
+    <None Remove=".\build\assets\images\previewWithZone.png" />
+    <None Remove=".\build\assets\images\previewZoneInFire.png" />
+    <None Remove=".\build\assets\images\preview_bottom.jpg" />
+    <None Remove=".\build\assets\images\preview_cropbottom.jpg" />
+    <None Remove=".\build\assets\images\preview_cropsafe.jpg" />
+    <None Remove=".\build\assets\images\preview_safeup.jpg" />
+    <None Remove=".\build\assets\images\questionMark.svg" />
+    <None Remove=".\build\assets\images\report.png" />
+    <None Remove=".\build\assets\images\Safe screen with Picture and Details - crop and save%401x.jpg" />
+    <None Remove=".\build\assets\images\Safe screen with Picture and Details - crop background%401x.jpg" />
+    <None Remove=".\build\assets\images\searchicon.svg" />
+    <None Remove=".\build\assets\images\Search_Icon.svg" />
+    <None Remove=".\build\assets\images\seprator.png" />
+    <None Remove=".\build\assets\images\settings.png" />
+    <None Remove=".\build\assets\images\site.png" />
+    <None Remove=".\build\assets\images\SixSlotLayout.png" />
+    <None Remove=".\build\assets\images\success.svg" />
+    <None Remove=".\build\assets\images\warningIcon.svg" />
+    <None Remove=".\build\assets\images\ZoneID+DeviceAddresswithDeviceLabel%401x.jpg" />
+    <None Remove=".\build\assets\images\ZoneID+DeviceAddresswithZone+DeviceLabel%401x.jpg" />
+    <None Remove=".\build\assets\images\ZoneID+DeviceAddresswithZoneLabel%401x.jpg" />
+    <None Remove=".\build\assets\images\ZoneID+ZoneRefwithDeviceLabel%401x.jpg" />
+    <None Remove=".\build\assets\images\ZoneID+ZoneRefwithZone+DeviceLabel%401x.jpg" />
+    <None Remove=".\build\assets\images\ZoneID+ZoneRefwithZoneLabel%401x.jpg" />
+    <None Remove=".\build\assets\images\ZoneIDwithDeviceLabel%401x.jpg" />
+    <None Remove=".\build\assets\images\ZoneIDwithZone+DeviceLabel%401x.jpg" />
+    <None Remove=".\build\assets\images\ZoneIDwithZoneLabel%401x.jpg" />
+    <None Remove=".\build\assets\images\zones.png" />
+    <None Remove=".\build\back.png" />
+    <None Remove=".\build\blank.png" />
+    <None Remove=".\build\cause-and-effect-cause-and-effect-module-ngfactory.js" />
+    <None Remove=".\build\cause-and-effect-cause-and-effect-module-ngfactory.js.map" />
+    <None Remove=".\build\cause-and-effect-cause-and-effect-module.js" />
+    <None Remove=".\build\cause-and-effect-cause-and-effect-module.js.map" />
+    <None Remove=".\build\cellbottomalignment.svg" />
+    <None Remove=".\build\cellcenteralignment.svg" />
+    <None Remove=".\build\celltopalignment.svg" />
+    <None Remove=".\build\chart-sprites.png" />
+    <None Remove=".\build\charttab-sprites.png" />
+    <None Remove=".\build\charttype-sprites.png" />
+    <None Remove=".\build\checkbox-checked-disabled.svg" />
+    <None Remove=".\build\checkbox-checked.svg" />
+    <None Remove=".\build\checkbox-empty.svg" />
+    <None Remove=".\build\checkbox-indeterminate.svg" />
+    <None Remove=".\build\checkmark.svg" />
+    <None Remove=".\build\circle.png" />
+    <None Remove=".\build\colorpicker_light_material.png" />
+    <None Remove=".\build\common.js" />
+    <None Remove=".\build\common.js.map" />
+    <None Remove=".\build\companyname_gradiant.png" />
+    <None Remove=".\build\criticalGray.png" />
+    <None Remove=".\build\default~cause-and-effect-cause-and-effect-module-ngfactory~devices-devices-module-ngfactory~errors-e~2bfdac4a.js" />
+    <None Remove=".\build\default~cause-and-effect-cause-and-effect-module-ngfactory~devices-devices-module-ngfactory~errors-e~2bfdac4a.js.map" />
+    <None Remove=".\build\default~cause-and-effect-cause-and-effect-module-ngfactory~devices-devices-module-ngfactory~errors-e~8f3faf1d.js" />
+    <None Remove=".\build\default~cause-and-effect-cause-and-effect-module-ngfactory~devices-devices-module-ngfactory~errors-e~8f3faf1d.js.map" />
+    <None Remove=".\build\default~cause-and-effect-cause-and-effect-module-ngfactory~devices-devices-module-ngfactory~modules-~3cb4a91f.js" />
+    <None Remove=".\build\default~cause-and-effect-cause-and-effect-module-ngfactory~devices-devices-module-ngfactory~modules-~3cb4a91f.js.map" />
+    <None Remove=".\build\default~cause-and-effect-cause-and-effect-module-ngfactory~devices-devices-module-ngfactory~modules-~badbf2ee.js" />
+    <None Remove=".\build\default~cause-and-effect-cause-and-effect-module-ngfactory~devices-devices-module-ngfactory~modules-~badbf2ee.js.map" />
+    <None Remove=".\build\default~cause-and-effect-cause-and-effect-module-ngfactory~modules-site-list-site-list-module-ngfact~3cdde379.js" />
+    <None Remove=".\build\default~cause-and-effect-cause-and-effect-module-ngfactory~modules-site-list-site-list-module-ngfact~3cdde379.js.map" />
+    <None Remove=".\build\default~cause-and-effect-cause-and-effect-module-ngfactory~panels-panels-module-ngfactory.js" />
+    <None Remove=".\build\default~cause-and-effect-cause-and-effect-module-ngfactory~panels-panels-module-ngfactory.js.map" />
+    <None Remove=".\build\default~cause-and-effect-cause-and-effect-module-ngfactory~panels-panels-module-ngfactory~zones-zone~e0c6e89f.js" />
+    <None Remove=".\build\default~cause-and-effect-cause-and-effect-module-ngfactory~panels-panels-module-ngfactory~zones-zone~e0c6e89f.js.map" />
+    <None Remove=".\build\default~cause-and-effect-cause-and-effect-module~panels-panels-module.js" />
+    <None Remove=".\build\default~cause-and-effect-cause-and-effect-module~panels-panels-module.js.map" />
+    <None Remove=".\build\default~devices-devices-module-ngfactory~errors-errors-module-ngfactory~panels-panels-module-ngfacto~667e3d4c.js" />
+    <None Remove=".\build\default~devices-devices-module-ngfactory~errors-errors-module-ngfactory~panels-panels-module-ngfacto~667e3d4c.js.map" />
+    <None Remove=".\build\default~devices-devices-module-ngfactory~modules-battery-calculator-battery-calculator-module-ngfact~2eb813f1.js" />
+    <None Remove=".\build\default~devices-devices-module-ngfactory~modules-battery-calculator-battery-calculator-module-ngfact~2eb813f1.js.map" />
+    <None Remove=".\build\default~devices-devices-module-ngfactory~modules-battery-calculator-battery-calculator-module-ngfact~6de1b389.js" />
+    <None Remove=".\build\default~devices-devices-module-ngfactory~modules-battery-calculator-battery-calculator-module-ngfact~6de1b389.js.map" />
+    <None Remove=".\build\default~devices-devices-module-ngfactory~panels-panels-module-ngfactory.js" />
+    <None Remove=".\build\default~devices-devices-module-ngfactory~panels-panels-module-ngfactory.js.map" />
+    <None Remove=".\build\default~devices-devices-module-ngfactory~panels-panels-module-ngfactory~settings-settings-module-ngf~6b1875cd.js" />
+    <None Remove=".\build\default~devices-devices-module-ngfactory~panels-panels-module-ngfactory~settings-settings-module-ngf~6b1875cd.js.map" />
+    <None Remove=".\build\default~devices-devices-module~panels-panels-module.js" />
+    <None Remove=".\build\default~devices-devices-module~panels-panels-module.js.map" />
+    <None Remove=".\build\default~modules-site-list-site-list-module-ngfactory~panels-panels-module-ngfactory~settings-setting~2c7921e4.js" />
+    <None Remove=".\build\default~modules-site-list-site-list-module-ngfactory~panels-panels-module-ngfactory~settings-setting~2c7921e4.js.map" />
+    <None Remove=".\build\default~panels-panels-module-ngfactory~settings-settings-module-ngfactory.js" />
+    <None Remove=".\build\default~panels-panels-module-ngfactory~settings-settings-module-ngfactory.js.map" />
+    <None Remove=".\build\default~panels-panels-module~settings-settings-module.js" />
+    <None Remove=".\build\default~panels-panels-module~settings-settings-module.js.map" />
+    <None Remove=".\build\devices-devices-module-ngfactory.js" />
+    <None Remove=".\build\devices-devices-module-ngfactory.js.map" />
+    <None Remove=".\build\diagram_context.png" />
+    <None Remove=".\build\diamond.png" />
+    <None Remove=".\build\down-arrow.png" />
+    <None Remove=".\build\down.png" />
+    <None Remove=".\build\down_arrow_light.cur" />
+    <None Remove=".\build\draw_border_grid_light.cur" />
+    <None Remove=".\build\draw_border_light.cur" />
+    <None Remove=".\build\dropPointer.cur" />
+    <!-- <None Remove=".\build\ejicons.eot" />
+    <None Remove=".\build\ejicons.svg" />
+    <None Remove=".\build\ejicons.ttf" />
+    <None Remove=".\build\ejicons.woff" />
+    <None Remove=".\build\ejxlicons.eot" />
+    <None Remove=".\build\ejxlicons.svg" />
+    <None Remove=".\build\ejxlicons.ttf" />
+    <None Remove=".\build\ejxlicons.woff" /> -->
+    <None Remove=".\build\errors-errors-module-ngfactory.js" />
+    <None Remove=".\build\errors-errors-module-ngfactory.js.map" />
+    <None Remove=".\build\errors-errors-module.js" />
+    <None Remove=".\build\errors-errors-module.js.map" />
+    <None Remove=".\build\favicon.ico" />
+    <None Remove=".\build\files-files-module-ngfactory.js" />
+    <None Remove=".\build\files-files-module-ngfactory.js.map" />
+    <None Remove=".\build\files-files-module.js" />
+    <None Remove=".\build\files-files-module.js.map" />
+    <None Remove=".\build\file_icons.png" />
+    <None Remove=".\build\format_painter_light.cur" />
+    <None Remove=".\build\glyphicons-halflings-regular.eot" />
+    <None Remove=".\build\glyphicons-halflings-regular.svg" />
+    <None Remove=".\build\glyphicons-halflings-regular.ttf" />
+    <None Remove=".\build\glyphicons-halflings-regular.woff" />
+    <None Remove=".\build\glyphicons-halflings-regular.woff2" />
+    <None Remove=".\build\green.png" />
+    <None Remove=".\build\groups-groups-module-ngfactory.js" />
+    <None Remove=".\build\groups-groups-module-ngfactory.js.map" />
+    <None Remove=".\build\groups-groups-module.js" />
+    <None Remove=".\build\groups-groups-module.js.map" />
+    <None Remove=".\build\header_bg.png" />
+    <None Remove=".\build\highlight.png" />
+    <None Remove=".\build\Home.png" />
+    <None Remove=".\build\Home_hover.png" />
+    <None Remove=".\build\HoneywellSansTT-Bold.woff" />
+    <None Remove=".\build\HoneywellSansTT-Medium.woff" />
+    <None Remove=".\build\icon-action-export-blue.svg" />
+    <None Remove=".\build\icon-action-filter.svg" />
+    <None Remove=".\build\icon-action-search.svg" />
+    <None Remove=".\build\icon-arrow-triangle-down-grey.svg" />
+    <None Remove=".\build\icon-arrow-triangle-up-blue.svg" />
+    <None Remove=".\build\icon-back-arrow-blue.svg" />
+    <None Remove=".\build\icon-back-arrow-white.svg" />
+    <None Remove=".\build\icon-contact-active.svg" />
+    <None Remove=".\build\icon-grid-sorting-down.svg" />
+    <None Remove=".\build\icon-grid-sorting-up.svg" />
+    <None Remove=".\build\icon-info-active.svg" />
+    <None Remove=".\build\icon-info.svg" />
+    <None Remove=".\build\icon-more-options-active.svg" />
+    <None Remove=".\build\icon-more-options.svg" />
+    <None Remove=".\build\icon-panel-sync-active.svg" />
+    <None Remove=".\build\icon-show-preview.svg" />
+    <None Remove=".\build\icon-state-alert.svg" />
+    <None Remove=".\build\icon-state-warning.svg" />
+    <None Remove=".\build\icon-up-arrow-blue.svg" />
+    <None Remove=".\build\icon-zones.svg" />
+    <None Remove=".\build\index.html" />
+    <None Remove=".\build\main.js" />
+    <None Remove=".\build\main.js.map" />
+    <None Remove=".\build\minus.png" />
+    <None Remove=".\build\missing-icon-placeholder.svg" />
+    <None Remove=".\build\modules-battery-calculator-battery-calculator-module-ngfactory.js" />
+    <None Remove=".\build\modules-battery-calculator-battery-calculator-module-ngfactory.js.map" />
+    <None Remove=".\build\modules-site-list-site-list-module-ngfactory.js" />
+    <None Remove=".\build\modules-site-list-site-list-module-ngfactory.js.map" />
+    <None Remove=".\build\modules-site-list-site-list-module.js" />
+    <None Remove=".\build\modules-site-list-site-list-module.js.map" />
+    <None Remove=".\build\nouser.svg" />
+    <None Remove=".\build\panels-panels-module-ngfactory.js" />
+    <None Remove=".\build\panels-panels-module-ngfactory.js.map" />
+    <None Remove=".\build\panels-panels-module.js" />
+    <None Remove=".\build\panels-panels-module.js.map" />
+    <None Remove=".\build\plus.png" />
+    <None Remove=".\build\polyfills.js" />
+    <None Remove=".\build\polyfills.js.map" />
+    <None Remove=".\build\preloader-pdfviewer.gif" />
+    <None Remove=".\build\preview_bottom.jpg" />
+    <None Remove=".\build\preview_cropbottom.jpg" />
+    <None Remove=".\build\preview_cropsafe.jpg" />
+    <None Remove=".\build\preview_safeup.jpg" />
+    <None Remove=".\build\projects-battery-calculator-src-app-modules-battery-calculator-battery-calculator-module.js" />
+    <None Remove=".\build\projects-battery-calculator-src-app-modules-battery-calculator-battery-calculator-module.js.map" />
+    <None Remove=".\build\radial.png" />
+    <None Remove=".\build\rating-star.png" />
+    <None Remove=".\build\red.png" />
+    <None Remove=".\build\reports-reports-module-ngfactory.js" />
+    <None Remove=".\build\reports-reports-module-ngfactory.js.map" />
+    <None Remove=".\build\reports-reports-module.js" />
+    <None Remove=".\build\reports-reports-module.js.map" />
+    <None Remove=".\build\right-arrow.png" />
+    <None Remove=".\build\right_arrow_light.cur" />
+    <None Remove=".\build\Rotate.cur" />
+    <None Remove=".\build\rotator-icon.png" />
+    <None Remove=".\build\runtime.js" />
+    <None Remove=".\build\runtime.js.map" />
+    <None Remove=".\build\schedule_priority.png" />
+    <None Remove=".\build\scripts.js" />
+    <None Remove=".\build\scripts.js.map" />
+    <None Remove=".\build\settings-settings-module-ngfactory.js" />
+    <None Remove=".\build\settings-settings-module-ngfactory.js.map" />
+    <None Remove=".\build\settings-settings-module.js" />
+    <None Remove=".\build\settings-settings-module.js.map" />
+    <None Remove=".\build\sites-sites-module-ngfactory.js" />
+    <None Remove=".\build\sites-sites-module-ngfactory.js.map" />
+    <None Remove=".\build\sites-sites-module.js" />
+    <None Remove=".\build\sites-sites-module.js.map" />
+    <None Remove=".\build\slider-tick.png" />
+    <None Remove=".\build\sprites.png" />
+    <None Remove=".\build\styles.js" />
+    <None Remove=".\build\styles.js.map" />
+    <None Remove=".\build\tablecenteralignment.svg" />
+    <None Remove=".\build\tableleftalignment.svg" />
+    <None Remove=".\build\tablerightalignment.svg" />
+    <None Remove=".\build\three-color.png" />
+    <None Remove=".\build\triangle.png" />
+    <None Remove=".\build\up-arrow.png" />
+    <None Remove=".\build\up.png" />
+    <None Remove=".\build\updown.png" />
+    <None Remove=".\build\vendor.js" />
+    <None Remove=".\build\vendor.js.map" />
+    <None Remove=".\build\waitingpopup.gif" />
+    <None Remove=".\build\waiting_popup.gif" />
+    <None Remove=".\build\zones-zones-module-ngfactory.js" />
+    <None Remove=".\build\zones-zones-module-ngfactory.js.map" />
+    <None Remove=".\build\zones-zones-module.js" />
+    <None Remove=".\build\zones-zones-module.js.map" />
+    <None Remove=".\build\Zoom-In.png" />
+    <None Remove=".\build\Zoom-In_hover.png" />
+    <None Remove=".\build\Zoom-out.png" />
+    <None Remove=".\build\Zoom-out_hover.png" />
+    <None Remove=".\Honeywell.FTS.Frontend.njsproj" />
+    <None Remove=".\karma_html\Chrome 80.0.3987 %28Windows 10.0.0%29\index.html" />
+    <None Remove=".\karma_html\HeadlessChrome 80.0.3987 %28Windows 10.0.0%29\index.html" />
+    <None Remove=".\obj\Debug\netcoreapp3.0\Honeywell.FTS.Frontend.AssemblyInfo.cs" />
+    <None Remove=".\obj\Debug\netcoreapp3.0\Honeywell.FTS.Frontend.AssemblyInfoInputs.cache" />
+    <None Remove=".\obj\Debug\netcoreapp3.0\Honeywell.FTS.Frontend.assets.cache" />
+    <None Remove=".\obj\Debug\netcoreapp3.0\Honeywell.FTS.Frontend.csproj.FileListAbsolute.txt" />
+    <None Remove=".\obj\Debug\netcoreapp3.0\Honeywell.FTS.Frontend.csprojAssemblyReference.cache" />
+    <None Remove=".\obj\Debug\netcoreapp3.0\Honeywell.FTS.Frontend.dll" />
+    <None Remove=".\obj\Debug\netcoreapp3.0\Honeywell.FTS.Frontend.pdb" />
+    <None Remove=".\obj\Debug\netcoreapp3.0\Honeywell.FTS.Frontend.RazorAssemblyInfo.cache" />
+    <None Remove=".\obj\Debug\netcoreapp3.0\Honeywell.FTS.Frontend.RazorAssemblyInfo.cs" />
+    <None Remove=".\obj\Debug\netcoreapp3.0\Honeywell.FTS.Frontend.RazorTargetAssemblyInfo.cache" />
+    <None Remove=".\obj\Debug\netcoreapp3.0\project.razor.json" />
+    <None Remove=".\obj\Debug\netcoreapp3.0\staticwebassets\Honeywell.FTS.Frontend.StaticWebAssets.Manifest.cache" />
+    <None Remove=".\obj\Debug\netcoreapp3.0\staticwebassets\Honeywell.FTS.Frontend.StaticWebAssets.xml" />
+    <None Remove=".\obj\Debug\netcoreapp3.1\Honeywell.FTS.Frontend.AssemblyInfo.cs" />
+    <None Remove=".\obj\Debug\netcoreapp3.1\Honeywell.FTS.Frontend.AssemblyInfoInputs.cache" />
+    <None Remove=".\obj\Debug\netcoreapp3.1\Honeywell.FTS.Frontend.assets.cache" />
+    <None Remove=".\obj\Debug\netcoreapp3.1\Honeywell.FTS.Frontend.csprojAssemblyReference.cache" />
+    <None Remove=".\obj\Debug\netcoreapp3.1\Honeywell.FTS.Frontend.RazorAssemblyInfo.cache" />
+    <None Remove=".\obj\Debug\netcoreapp3.1\Honeywell.FTS.Frontend.RazorAssemblyInfo.cs" />
+    <None Remove=".\obj\Honeywell.FTS.Frontend.csproj.nuget.cache" />
+    <None Remove=".\obj\Honeywell.FTS.Frontend.csproj.nuget.dgspec.json" />
+    <None Remove=".\obj\Honeywell.FTS.Frontend.csproj.nuget.g.props" />
+    <None Remove=".\obj\Honeywell.FTS.Frontend.csproj.nuget.g.targets" />
+    <None Remove=".\obj\project.assets.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include=".\" />
+  </ItemGroup>
+
+  <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
+    <!-- Ensure Node.js is installed -->
+    <Exec Command="node --version" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+  </Target>
+
+  <Target Name="PublishRunWebpack" AfterTargets="ComputeFilesToPublish">
+    <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build -- --prod" />
+    <Exec WorkingDirectory="$(SpaRoot)" Command="npm run build:ssr -- --prod" Condition=" '$(BuildServerSideRenderer)' == 'true' " />
+
+    <!-- Include the newly-built files in the publish output -->
+    <ItemGroup>
+      <DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" />
+      <DistFiles Include="$(SpaRoot)node_modules\**" Condition="'$(BuildServerSideRenderer)' == 'true'" />
+      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+        <RelativePath>%(DistFiles.Identity)</RelativePath>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      </ResolvedFileToPublish>
+    </ItemGroup>
+  </Target>
+
+</Project>

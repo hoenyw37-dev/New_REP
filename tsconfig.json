@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "outDir": "./out-tsc/spec",
+    "types": ["jasmine", "node"],
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["es2018", "dom"],
+    "sourceMap": true,
+    "declaration": false,
+    "strict": false,
+    // "noImplicitAny": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "src/**/*.spec.ts",
+    "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
